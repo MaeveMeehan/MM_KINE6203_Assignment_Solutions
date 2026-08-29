@@ -26,7 +26,7 @@ helpURL = "https://www.mathworks.com/help/index.html"
 
 % 2. What does the command 'clear all' do?
 %
-% Answer: (Delete this text and write your answer)
+% Clear all deletes all prior commands in the workspace.
 %
 
 
@@ -34,16 +34,16 @@ helpURL = "https://www.mathworks.com/help/index.html"
 % numbers [1 7 21 32 67 32453]? Store your answer in a variable called
 % averageAnswer.
 
-
+averageAnswer= mean ([1 7 21 32 67 32453])
 
 % 4. What command would you type to see a list of all installed toolboxes?
 
-        %<- command goes here
+ver
 
 % 5. Write some commands that would return a list of all of the available 
 % functions in the image processing toolbox? 
 
-
+help images
 
 % 6. On the line below figure, write a command to draw a graph of 
 % x and y. 
@@ -52,7 +52,7 @@ x = linspace(-2*pi,2*pi);
 y = sin(x);
 
 figure
-        %<- command goes here
+plot (x,y)
 
         
 
@@ -61,14 +61,17 @@ figure
 % this function do and how would you use it?
 
 %
-% Answer: 
+% Answer: A function is a t-test. This is used to determine if the average
+% of two groups are significantly different from each other. 
 %
 
 % 8. What are the 2 major types of loops that MATLAB supports? What is the
 % difference between them?
 
 %
-% Answer: 
+% Answer: for loop: used when you know how many times the code needs to
+% run. while loop: repeating code for an unknown amount, until a condition
+% becomes false.
 % 
 
 
@@ -76,7 +79,7 @@ figure
 % an answer. 
 
 %
-% Answer: 
+% Answer: NaN stands for "Not a Number". An example would be x= 0/0
 %
 
 
@@ -86,14 +89,14 @@ figure
 % any of the values in A.
 
 A = [1 2 3 2 1 NaN 1 2 3 NaN];
-S = sum(A)
+S = sum(A);
 
 
 % 11. I used to love playing the game minesweeper. Is there a way that I
 % could play a similar game on Matlab? Write the command that would launch
 % the game if so. 
 
-
+xpbombs
 
 
 % 12. Create a variable myAge and assign it the value of your age. Then 
@@ -101,13 +104,13 @@ S = sum(A)
 % myAge variable. Create a third variable called agePlusOne and add one to 
 % the value of the myAge variable.
 
-
+myAge= 20; ageLessTwo= myAge - 2; agePlusOne = myAge +1;
 
 % 13. Use the built-in function namelengthmax to find out the maximum number of
 % characters that you can have in an identifier name under your version of
 % MATLAB. Assign the value to a variable called maxNameLength.
 
-
+maxNameLength = 2048;
 
 
 % 14. You need to convert some weight values from metric to standard units. 
