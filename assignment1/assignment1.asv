@@ -120,15 +120,7 @@ maxNameLength = 2048;
 
 originalWeightkg = 100;
 % Add your code on the next line
-originalWeightPounds = originalWeightkg * 2.20462;
-originalWeightOunces = originalWeightPounds * 16;
-disp ('=== After creating variables ===');
-who;
-whos;
-clear originalWeightPounds;
-disp ('=== After clearing originalWeightPounds ===');
-who;
-whos;
+
 
 
 % 15. Assign a number with a decimal place to an appropriately named variable. Convert the
