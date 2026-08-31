@@ -3,7 +3,7 @@
 %
 % Submitted by: Maeve Meehan
 %
-% Due: September 1, 2026
+% Due: August 30, 2026
 %
 % Instructions: 
 
@@ -22,19 +22,18 @@
 
 % 1. Set the url of the matlab documentation to a variable called helpURL
 
-helpURL = "https://www.mathworks.com/help/index.html"
+helpURL = "https://www.mathworks.com/help/index.html";
 
 % 2. What does the command 'clear all' do?
 %
 % Clear all deletes all prior commands in the workspace.
 %
 
-
 % 3. Find a matlab function to take the average of the following
 % numbers [1 7 21 32 67 32453]? Store your answer in a variable called
 % averageAnswer.
 
-averageAnswer= mean ([1 7 21 32 67 32453])
+averageAnswer = mean ([1 7 21 32 67 32453]);
 
 % 4. What command would you type to see a list of all installed toolboxes?
 
@@ -43,7 +42,7 @@ ver
 % 5. Write some commands that would return a list of all of the available 
 % functions in the image processing toolbox? 
 
-help images
+help images;
 
 % 6. On the line below figure, write a command to draw a graph of 
 % x and y. 
@@ -52,9 +51,7 @@ x = linspace(-2*pi,2*pi);
 y = sin(x);
 
 figure
-plot (x,y)
-
-        
+plot (x,y);        
 
 % 7. Find a function that performs a statistical test you've seen used
 % in a journal article (there are many possible answers to this). What does
@@ -96,7 +93,7 @@ S = sum(A);
 % could play a similar game on Matlab? Write the command that would launch
 % the game if so. 
 
-xpbombs
+xpbombs;
 
 
 % 12. Create a variable myAge and assign it the value of your age. Then 
@@ -135,20 +132,24 @@ whos;
 % variable to the type int32 and store the result in a new variable (hint: this is known
 % as casting in computer programming). Use whos to check your result. 
 
-
+decimalNumber = 123.4567;
+integerNumber = int32 (decimalNumber);
+whos;
 
 
 % 16. Create a variable called weightInLBs to store a weight in pounds. Convert this to 
 % kilograms using an appropriate calculation or function and assign the result to a variable weightInKgs.
 
-
+weightInLBs = 150;
+weightInKgs = weightInLBs * 0.453592;
 
 
 % 18. Create a variable fTemp to store a temperature in degrees Fahrenheit (F). 
 % Convert this to degrees Celsius (C) using an appropriate 
 % calculation and store the result in a variable cTemp.
 
-
+fTemp = 98.6; 
+cTemp = (fTemp - 32) * 5/9;
 
 
 % 19. Using the colon operator, create the following row vectors:
@@ -157,21 +158,21 @@ whos;
 % 8 6 4 2
 % Store your results with variable names vecA, vecB and vecC respectively.
 
-
-
+vecA = 2:7; vecB = 1.1: 0.2: 1.7; vecC = 8: -2: 2;
+disp ('vecA ='); disp (vecA); disp ('vecB ='); disp (vecB); disp ('vecC ='); disp (vecC);
 
 % 20. Give a MATLAB expression that would create a vector 
 % (assigned to a variable called vec) of 50 elements that range, equally spaced, 
 % from 0 to 2pi. 
 
 
-
+vec= linspace (0, 2*pi, 50);
 
 % 21. Using the colon operator and the transpose operator, 
 % create a column vector that has the values -1 to 1 in steps of 0.5.
 % Assign your answer to a variable called colVec.
 
-
+colVec = (-1: 0.5: 1)';
 
 
 % 22. Create a variable called rows that is a random integer in the inclusive range 
@@ -180,35 +181,37 @@ whos;
 % dimensions given by the values of rows and cols. The resultMat should
 % change each time you execute your code. 
 
-
-
+rows= randi ([1,5]);
+cols =  randi ([1,5]);
+resultMat = zeros (rows, cols);
 
 % 23. Create a vector of five random integers, each in the inclusive range 
 % from -10 to 10 assigned to a variable named originalVec. Perform each of 
 % the following on the original vector and store your results in appropriately 
 % named variables. (you should have a seperate line of code for each)
-
+originalVec = randi ([-10,10],1,5);
 % - subtract 3 from each element
-
-
+subtractedVec = originalVec - 3;
 % - count how many are positive
-
-
+positiveCount = sum (originalVec > 0);
 % - get the absolute value of each element
-
-
-
+absoluteVec = abs (originalVec);
 % - find the maximum.
-
+maxVal = max(originalVec);
 
 
 % 24. Write some code that will calculate the area of a trapezoid. Create
 % variables for base1, base2, and height and assign them values. Store the
 % result of your calculation in a variable called trapArea. Comment your
 % code so that another user can understand what your code does. 
-
-
-
+%Define the lengths of the two parallel bases
+base1= 10; %Length of first base in meters
+base2 = 6; %Length of second base in meters
+%Define the height (perpendicular distance between the bases)
+height = 4; %height in meters
+%Calculate the area of the trapezoid
+%Formula : Area= (base1+base2)* height/2
+trapArea= (base1+base2) * height/2;
 
 
 % 25. If you were to start your own lab/business, a key metric that you 
@@ -221,7 +224,9 @@ whos;
 % costs and then calculates the ROI and stores the value in a variable called
 % ROI.
 
-
+total_revenues=input ('Enter the total revenues: $');
+totalCosts = input ('Enter total costs: $');
+ROI = (total_revenues -totalCosts)/ totalCosts * 100;
 
 
 
@@ -235,14 +240,10 @@ whos;
 % part 2, make sure you click the Run Section button vs the Run button) 
 
 %%% Enter the code for your program below this line
-
-
-
-
-
+disp ('Hello World')
 
 %%%%% When you have completed everything, type the following two commands
 %%%%% (without comments) into your command window. 
 
-%%% load handel
-%%% sound(y, Fs)
+load handel
+sound(y, Fs)
